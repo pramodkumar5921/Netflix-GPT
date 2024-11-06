@@ -39,3 +39,9 @@ configured tailWindCss into our App
 - Embedded the youtube and make it autoplay and mute.
 - Tailwind classes to make Container look awasome
 - Lets make the secondary components
+- Build Movie List
+- Build Movie Card
+- TMDB Image CDN URL
+- Made the Browse page amazing with Tailwind CSS
+- usePopularMovies Custom hook
+-  GPT search Feature
