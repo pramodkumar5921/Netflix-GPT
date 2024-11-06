@@ -38,3 +38,4 @@ configured tailWindCss into our App
 - Update Store with Trailer Viedo Data
 - Embedded the youtube and make it autoplay and mute.
 - Tailwind classes to make Container look awasome
+- Lets make the secondary components
