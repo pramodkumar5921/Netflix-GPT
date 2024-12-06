@@ -23,7 +23,7 @@ const GptSearchBar = () => {
     // make an api call to gpt api and get movies results 
 
     const gptQuery = "Act as a movie Recommendation system and suggest some movies for the query" + searchText.current.value + "only give me names of 5 movies in comma seperated like the example result given ahead, don't give any text other other then movie name in comma seperated. Example Gadar, sholay, Don, Golmaal, Koi Mill gaya, Ghatak";
-    const groq = new Groq({ apiKey: "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",dangerouslyAllowBrowser: true});
+    const groq = new Groq({ apiKey: "",dangerouslyAllowBrowser: true});
     async function getGroqChatCompletion() {
       return groq.chat.completions.create({
         messages: [
