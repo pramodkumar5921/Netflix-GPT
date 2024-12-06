@@ -45,3 +45,16 @@ configured tailWindCss into our App
 - Made the Browse page amazing with Tailwind CSS
 - usePopularMovies Custom hook
 -  GPT search Feature
+- GPT Search Page
+- GPT Search Bar
+- (Feature)Multi-language Feature in our App
+- Get Search Page
+- GPT Open Ai Api Key
+- fetched gptMoviesSuggestions From TMDB
+- Created gptSlice added data
+- Resused Movie List component to make movie suggestion container
+- Memoziation
+- Adding .env file
+- Adding .env file to gitignore
+- Made our Site Responsive
+

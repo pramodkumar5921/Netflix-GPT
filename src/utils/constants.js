@@ -7,13 +7,14 @@ export const API_OPTIONS = {
   headers: {
     accept: "application/json",
     Authorization:
-      "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJmYjBkYjZjNTU1YzhhMjkyNTYzMGRmY2VhY2RhNzBkNCIsIm5iZiI6MTczMDY0MTY5Ni42NTQ4MTEsInN1YiI6IjY3Mjc3ZGQxZTg2NDUzMTY5YmMzNzQxMCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.IQ3pgPR8ZBGQqQnn85w4h4V7OP_IqaMq0PFwhNZGWn0",
+      "Bearer " + process.env.REACT_APP_TMDB_KEY,
   },
 };
 export const IMG_CDN_URL = "https://image.tmdb.org/t/p/w500/";
 export const BG_URL =
   "https://assets.nflxext.com/ffe/siteui/vlv3/151f3e1e-b2c9-4626-afcd-6b39d0b2694f/web/IN-en-20241028-TRIFECTA-perspective_bce9a321-39cb-4cce-8ba6-02dab4c72e53_large.jpg";
 
+export const OPENAI_GPT_KEY = process.env.REACT_APP_OPENAI_GPT_KEY;
 export const SUPPORTED_LANGUAGES = [
   { identifier: "en", name: "English" },
   { identifier: "hindi", name: "Hindi" },
