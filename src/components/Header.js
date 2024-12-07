@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect,useState } from "react";
 import { onAuthStateChanged, signOut } from "firebase/auth";
 import { auth } from "../utils/firebase";
 import { useNavigate } from "react-router-dom";
@@ -9,6 +9,7 @@ import { toggleGptSearchView } from "../utils/gptSlice";
 import { changeLanguage } from "../utils/configSlice";
 
 const Header = () => {
+  const [isOpen, setIsOpen] = useState(false);
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const user = useSelector((store) => store.user);
@@ -69,10 +70,19 @@ const Header = () => {
           >
           {showGptSearch ? "Homepage" : "GPT Search"}
           </button>
-          <img className="hidden md:block w-12 h-12" alt="usericon" src={user.photoURL} />
-          <button onClick={handleSignOut} className="font-bold text-white">
-             (Sign Out)
-          </button>
+          <img className="hidden md:block w-14 h-14 rounded-full" alt="usericon" src={user.photoURL}
+           onClick={() => setIsOpen(!isOpen)}
+          />
+          {isOpen && (
+          <div className="absolute right-0 mt-2 w-40 bg-white rounded-md shadow-lg z-10">
+            <button
+              onClick={handleSignOut}
+              className="block w-full px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+            >
+              Sign Out
+            </button>
+          </div>
+         )}
         </div>
       )}
     </div>
